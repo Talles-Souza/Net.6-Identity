@@ -13,7 +13,7 @@ namespace Entities.Entities
     {
         [Column("USR_CPF")]
         public string CPF { get; set; }
-        [Column("USR_TIPO")]
-        public TypeUser? Tipo { get; set; }
+        [Column("USR_TYPE")]
+        public TypeUser? Type { get; set; }
     }
 }
