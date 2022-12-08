@@ -23,5 +23,10 @@ namespace Entities.Entities
         [Column("MSN_CHANGE_DATE")]
         public DateTime ChangeDate { get; set; }
 
+        [ForeignKey("ApplicationUser")]
+        [Column(Order = 1)]
+        public string UserId { get; set; }
+
+        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }
