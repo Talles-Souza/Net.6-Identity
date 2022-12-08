@@ -1,8 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "NRn1sTm8kAtgGKtuCQet+uP17PJiRuKkXC7fISJ9YNA9lHNwZMNzNEsK0h9Q5RQS0We7Yy+waWh+5fNQzOjipw==",
+  "dgSpecHash": "ENmWqJu04pzzIh4AzfIwVS8tUwJMIPtI5V106WWMJ1aVMJHx59E9vLGCF662pvL0PIvL7ObaKWKvnj5kdvlXGw==",
   "success": true,
   "projectFilePath": "C:\\C#\\ApiDotNet_Identity\\Entities\\Entities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\talles\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.0\\microsoft.aspnetcore.cryptography.internal.7.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.0\\microsoft.aspnetcore.cryptography.keyderivation.7.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.0\\microsoft.extensions.identity.core.7.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\microsoft.extensions.identity.stores\\7.0.0\\microsoft.extensions.identity.stores.7.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\talles\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
