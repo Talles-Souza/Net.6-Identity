@@ -10,3 +10,5 @@ C:\C#\ApiDotNet_Identity\Entities\obj\Debug\net6.0\Entities.dll
 C:\C#\ApiDotNet_Identity\Entities\obj\Debug\net6.0\refint\Entities.dll
 C:\C#\ApiDotNet_Identity\Entities\obj\Debug\net6.0\Entities.pdb
 C:\C#\ApiDotNet_Identity\Entities\obj\Debug\net6.0\ref\Entities.dll
+C:\C#\ApiDotNet_Identity\Entities\bin\Debug\net6.0\Entities.runtimeconfig.json
+C:\C#\ApiDotNet_Identity\Entities\obj\Debug\net6.0\Entities.genruntimeconfig.cache
