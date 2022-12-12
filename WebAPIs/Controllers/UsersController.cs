@@ -1,8 +1,11 @@
 ﻿using Entities.Entities;
+using Entities.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text;
 using WebAPIs.Models;
 using WebAPIs.Token;
 
@@ -44,7 +47,7 @@ namespace WebAPIs.Controllers
 
                 var token = new TokenJWTBuilder()
                     .AddSecurityKey(JwtSecurityKey.Create("Secret_Key-12345678"))
-                .AddSubject("Empresa - Canal Dev Net Core")
+                .AddSubject("Teste de Api - Canal Dev Net Core")
                 .AddIssuer("Teste.Securiry.Bearer")
                 .AddAudience("Teste.Securiry.Bearer")
                 .AddClaim("idUsuario", idUsuario)
@@ -58,7 +61,47 @@ namespace WebAPIs.Controllers
                 return Unauthorized();
             }
 
+        }
+        [AllowAnonymous]
+        [Produces("application/json")]
+        [HttpPost("/api/AdicionaUsuarioIdentity")]
+        public async Task<IActionResult> AdicionaUsuarioIdentity([FromBody] Login login)
+        {
+            if (string.IsNullOrWhiteSpace(login.email) || string.IsNullOrWhiteSpace(login.password))
+                return Ok("Falta alguns dados");
+
+
+            var user = new ApplicationUser
+            {
+                UserName = login.email,
+                Email = login.email,
+                CPF = login.cpf,
+                Type = TypeUser.Common,
+            };
+
+            var resultado = await _userManager.CreateAsync(user, login.password);
+
+            if (resultado.Errors.Any())
+            {
+                return Ok(resultado.Errors);
+            }
+
+
+            // Geração de Confirmação caso precise
+            var userId = await _userManager.GetUserIdAsync(user);
+            var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
+            // retorno email 
+            code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
+            var resultado2 = await _userManager.ConfirmEmailAsync(user, code);
+
+            if (resultado2.Succeeded)
+                return Ok("Usuário Adicionado com Sucesso");
+            else
+                return Ok("Erro ao confirmar usuários");
 
         }
+
     }
 }
