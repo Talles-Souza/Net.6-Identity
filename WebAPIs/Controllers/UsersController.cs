@@ -12,6 +12,7 @@ using WebAPIs.Token;
 namespace WebAPIs.Controllers
 {
     [Route("api/[controller]")]
+    [AllowAnonymous]
     [ApiController]
     public class UsersController : ControllerBase
     {
@@ -37,7 +38,7 @@ namespace WebAPIs.Controllers
             }
 
             var resultado = await
-                _signInManager.PasswordSignInAsync(login.email, login.password, false, lockoutOnFailure: false);
+                _signInManager.PasswordSignInAsync(login.email, login.password,true,lockoutOnFailure: false);
 
             if (resultado.Succeeded)
             {
@@ -76,7 +77,8 @@ namespace WebAPIs.Controllers
                 UserName = login.email,
                 Email = login.email,
                 CPF = login.cpf,
-                Type = TypeUser.Common,
+                Type = TypeUser.Common
+                
             };
 
             var resultado = await _userManager.CreateAsync(user, login.password);
@@ -87,7 +89,8 @@ namespace WebAPIs.Controllers
             }
 
 
-            // Geração de Confirmação caso precise
+          
+            // Geração de Confirmação caso precise'
             var userId = await _userManager.GetUserIdAsync(user);
             var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
