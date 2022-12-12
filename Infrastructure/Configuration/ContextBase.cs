@@ -33,7 +33,7 @@ namespace Infrastructure.Configuration
         }
         public string ObterStringConexao()
         {
-            return "Data Source=localhost\\SQLEXPRESS;Initial Catalog=API_DDD_2022;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
+            return "Data Source=DESKTOP-85ANI47;Initial Catalog=testeSql;Integrated Security=False;User ID=sa;Password=dias0502;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
         }
     }
 }
