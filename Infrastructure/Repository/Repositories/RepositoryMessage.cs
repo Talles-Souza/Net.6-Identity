@@ -16,13 +16,10 @@ namespace Infrastructure.Repository.Repositories
 
         private readonly DbContextOptions<ContextBase> _dbContextOptions;
 
-        public RepositoryGenerics()
+        public RepositoryMessage()
         {
             _dbContextOptions = new DbContextOptions<ContextBase>();
         }
-        public RepositoryMessage()
-        {
-
-        }
+ 
     }
 }
