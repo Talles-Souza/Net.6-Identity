@@ -12,6 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 using WebAPIs.Token;
 using AutoMapper;
 using WebAPIs.Models;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,7 +30,11 @@ builder.Services.AddDbContext<ContextBase>(options =>
 
 
 //config identity --> usuario que vamos utilizar
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => { options.SignIn.RequireConfirmedAccount = true;
+    
+    options.Tokens.EmailConfirmationTokenProvider = TokenOptions.DefaultEmailProvider;
+    
+})
     .AddEntityFrameworkStores<ContextBase>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();

@@ -38,7 +38,7 @@ namespace WebAPIs.Controllers
             }
 
             var resultado = await
-                _signInManager.PasswordSignInAsync(login.email, login.password,true,lockoutOnFailure: false);
+                _signInManager.PasswordSignInAsync(login.email, login.password,false,lockoutOnFailure: false);
 
             if (resultado.Succeeded)
             {
