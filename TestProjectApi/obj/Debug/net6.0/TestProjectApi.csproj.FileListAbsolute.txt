@@ -96,3 +96,17 @@ C:\C#\ApiDotNet_Identity\TestProjectApi\obj\Debug\net6.0\refint\TestProjectApi.d
 C:\C#\ApiDotNet_Identity\TestProjectApi\obj\Debug\net6.0\TestProjectApi.pdb
 C:\C#\ApiDotNet_Identity\TestProjectApi\obj\Debug\net6.0\TestProjectApi.genruntimeconfig.cache
 C:\C#\ApiDotNet_Identity\TestProjectApi\obj\Debug\net6.0\ref\TestProjectApi.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Entities.dll
+C:\C#\ApiDotNet_Identity\TestProjectApi\bin\Debug\net6.0\Entities.pdb

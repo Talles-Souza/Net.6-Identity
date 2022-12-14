@@ -1,3 +1,4 @@
+using Entities.Entities;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Text;
@@ -7,13 +8,15 @@ namespace TestProjectApi
     [TestClass]
     public class UnitTest1
     {
-        public static string Token { get; set; }
+        public static string? Token { get; set; }
 
 
         [TestMethod]
         public void TestMethod1()
         {
-
+            var result = ChamaApiPost("https://localhost:7161/api/List").Result;
+            var listaMessage = JsonConvert.DeserializeObject<Message[]>(result).ToList();
+            Assert.IsTrue(listaMessage.Any());
         }
 
         public void GetToken()
@@ -28,7 +31,7 @@ namespace TestProjectApi
                 var dados = new
                 {
                     email = login,
-                    senha = senha,
+                    password = senha,
                     cpf = "string"
                 };
                 string JsonObjeto = JsonConvert.SerializeObject(dados);
@@ -53,7 +56,7 @@ namespace TestProjectApi
                 using (var cliente = new HttpClient())
                 {
                     cliente.DefaultRequestHeaders.Clear();
-                    cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                    cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer",Token);
                     var response = cliente.GetStringAsync(url);
                     response.Wait();
                     return response.Result;
@@ -64,10 +67,10 @@ namespace TestProjectApi
 
         }
 
-        public async Task<string> ChamaApiPost(string url, object dados = null)
+        public async Task<string?> ChamaApiPost(string url, object? dados = null)
         {
 
-            string JsonObjeto = dados != null ? JsonConvert.SerializeObject(dados) : "";
+            string JsonObjeto = dados == null ? JsonConvert.SerializeObject(dados) : "";
             var content = new StringContent(JsonObjeto, Encoding.UTF8, "application/json");
 
             GetToken(); // Gerar token
